@@ -1,3 +1,4 @@
+import javax.xml.stream.events.Characters;
 import java.util.*;
 
 public class Main {
@@ -38,6 +39,8 @@ public class Main {
             }
         }
 
+        System.out.println(helpList);
+
         Set<Character> mySet = new HashSet<>();
 
         for (String word : helpList) {
@@ -47,6 +50,7 @@ public class Main {
         }
 
         System.out.println(mySet);
+
     }
 
 }
