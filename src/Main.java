@@ -5,7 +5,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String[] words = new String[]{"mama", "papa", "it was me", "yes", "nope"};
+        String[] words = new String[]{"mama", "papa", "it was me", "rrrr", "pppp", "yes", "nope"};
         solver(words);
     }
     public static void solver(String[] words) {
@@ -13,6 +13,10 @@ public class Main {
         List<String> helpList = new ArrayList<>();
 
         for (String word : words) {
+            int numOfRightWords = helpList.size();
+            if (numOfRightWords >= 2) {
+                break;
+            };
             char[] chars = word.toCharArray();
 
             Map<Character, Integer> helpMap = new HashMap<>();
@@ -37,14 +41,6 @@ public class Main {
             if (isRightWord) {
                 helpList.add(word);
             }
-        }
-
-        int numOfRightWords = helpList.size();
-        for (int i = 0; i < 1; i++) {
-            if (numOfRightWords == 2) {
-                break;
-            }
-            System.out.println(i);
         }
 
         Set<Character> mySet = new HashSet<>();
