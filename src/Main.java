@@ -39,7 +39,13 @@ public class Main {
             }
         }
 
-        System.out.println(helpList);
+        int numOfRightWords = helpList.size();
+        for (int i = 0; i < 1; i++) {
+            if (numOfRightWords == 2) {
+                break;
+            }
+            System.out.println(i);
+        }
 
         Set<Character> mySet = new HashSet<>();
 
